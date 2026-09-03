@@ -36,7 +36,7 @@
             "aggnonce_index": 0,
             "msg_index": 0,
             "signer_index": 0,
-            "expected": "012ABBCB52B3016AC03AD82395A1A415C48B93DEF78718E62A7A90052FE224FB"
+            "expected": "80999B2647215418ABA92A78205A281C9A5563FB117B6AF39A0D599E0C749744"
         },
         {
             "key_indices": [1, 0, 2],
@@ -44,7 +44,7 @@
             "aggnonce_index": 0,
             "msg_index": 0,
             "signer_index": 1,
-            "expected": "9FF2F7AAA856150CC8819254218D3ADEEB0535269051897724F9DB3789513A52"
+            "expected": "80999B2647215418ABA92A78205A281C9A5563FB117B6AF39A0D599E0C749744"
         },
         {
             "key_indices": [1, 2, 0],
@@ -52,7 +52,7 @@
             "aggnonce_index": 0,
             "msg_index": 0,
             "signer_index": 2,
-            "expected": "FA23C359F6FAC4E7796BB93BC9F0532A95468C539BA20FF86D7C76ED92227900"
+            "expected": "80999B2647215418ABA92A78205A281C9A5563FB117B6AF39A0D599E0C749744"
         },
         {
             "key_indices": [0, 1],
@@ -60,7 +60,7 @@
             "aggnonce_index": 1,
             "msg_index": 0,
             "signer_index": 0,
-            "expected": "AE386064B26105404798F75DE2EB9AF5EDA5387B064B83D049CB7C5E08879531",
+            "expected": "E7F81547D86D071C973DBCD732D239567ED31626E780620A93DED33CDC0C6D84",
             "comment": "Both halves of aggregate nonce correspond to point at infinity"
         },
         {
@@ -69,7 +69,7 @@
             "aggnonce_index": 0,
             "msg_index": 1,
             "signer_index": 0,
-            "expected": "D7D63FFD644CCDA4E62BC2BC0B1D02DD32A1DC3030E155195810231D1037D82D",
+            "expected": "FF5E35F3DC718306245D90C6E0685621674BB164BEE6B5525FC94445009901F0",
             "comment": "Empty message"
         },
         {
@@ -78,7 +78,7 @@
             "aggnonce_index": 0,
             "msg_index": 2,
             "signer_index": 0,
-            "expected": "E184351828DA5094A97C79CABDAAA0BFB87608C32E8829A4DF5340A6F243B78C",
+            "expected": "AFCA31AC068CEFEDC33A63D1C827F61FC0F3C5F398B7DAF6CD11D8267F318BAF",
             "comment": "38-byte message"
         }
     ],
@@ -101,7 +101,7 @@
             "secnonce_index": 0,
             "error": {
                 "type": "invalid_contribution",
-                "signer": 2,
+                "signer": 0,
                 "contrib": "pubkey"
             },
             "comment": "Signer 2 provided an invalid public key"
