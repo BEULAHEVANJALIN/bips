@@ -85,7 +85,7 @@
             "msg_index": 0,
             "tweaks": [],
             "is_xonly": [],
-            "expected": "50EC492DEF876EBC569B5D9A6801DD432171F217AD54A7B1E2D8E9204A3C9AFA"
+            "expected": "C0A718A18CC0D251BE82B9268D14FB50E05BB193659A21C9959DBF64AB519D21"
         },
         {
             "id": "balanced",
@@ -107,7 +107,7 @@
             "msg_index": 0,
             "tweaks": [],
             "is_xonly": [],
-            "expected": "0F4B96669319A39C1819B9C3E1509593ACEA1E97074E4A48809C50FB9046D5B8"
+            "expected": "DCEA7826FC546DB8B4392CE438713EB4160EA23AD91FCB42A6011A55F8962652"
         },
         {
             "id": "three_levels",
@@ -129,7 +129,7 @@
             "msg_index": 0,
             "tweaks": [],
             "is_xonly": [],
-            "expected": "FB1BFCC9DD1D34649E8510BF855DDD647286E36DA566C82901D6829BBAC4B6FD"
+            "expected": "D3DE6944CF045F07C966CD4489FEE42C3D0A83B77F9EF7AC306C88397C45A31D"
         },
         {
             "id": "unequal_depths",
@@ -155,7 +155,7 @@
             "msg_index": 0,
             "tweaks": [],
             "is_xonly": [],
-            "expected": "349B48A31D640D9AD1EFA82DFAD6D4D3E16DF4E419317BCBA890E308200B62FA"
+            "expected": "AC69B7E8228149F1A638AAB270E404889AD3423666184F2A39D90B791CE9FF9B"
         },
         {
             "id": "unary_groups",
@@ -173,7 +173,7 @@
             "msg_index": 0,
             "tweaks": [],
             "is_xonly": [],
-            "expected": "B10CB0A66DC326D136DC6DF16060527D99BCA3319B088B91A05973E48219BE6C"
+            "expected": "182AA681C0D8472610D3C7F2F25B1EE1141DB7B9116C8053FAB6A622B2747550"
         },
         {
             "id": "wide_group",
@@ -197,7 +197,7 @@
             "msg_index": 0,
             "tweaks": [],
             "is_xonly": [],
-            "expected": "6ED7FBE43A6021EBBE897A6F44BFD120A4E065CA580799CAB8137E14CEF8E143"
+            "expected": "13AD21BA66FC5A61D808504B14A42874DDA0CFB6235BDF6726DC4D00424164F9"
         },
         {
             "id": "duplicate_siblings",
@@ -219,7 +219,7 @@
             "msg_index": 0,
             "tweaks": [],
             "is_xonly": [],
-            "expected": "946D5331F730F528017B46254F75CE212F8457542481DF8B302C6C12010EE9EC"
+            "expected": "58591B3BB0E485420CB09C958476196029BCAB2B1AD9E5A4A23AEC6C14080FD0"
         },
         {
             "id": "all_duplicate_group",
@@ -241,7 +241,7 @@
             "msg_index": 0,
             "tweaks": [],
             "is_xonly": [],
-            "expected": "7E345AFDFE960D090EE41E225A08FBD5ED9EA4691E6E905F4C594A89E42B2AEA"
+            "expected": "40FE638C4C51ED1190150A0A0838FDA7A33C2CC6F00842B11D389E7CBC57BA3E"
         },
         {
             "id": "duplicate_nested",
@@ -261,7 +261,7 @@
             "msg_index": 0,
             "tweaks": [],
             "is_xonly": [],
-            "expected": "C319A8791CEF70BBE1DBC5B0BBFA223C15EF1619B0DFB9EABF13E6E1AABE6873"
+            "expected": "51C189B6F7E05948B00DD1980D89987EFD377B71756A186463852663E63E1FFB"
         },
         {
             "id": "duplicate_direct",
@@ -281,7 +281,7 @@
             "msg_index": 0,
             "tweaks": [],
             "is_xonly": [],
-            "expected": "0061482B5E4287CF6244061D4EDBE5E2F4500F3D29CFA59AA5A4CBBC6F886F6F"
+            "expected": "E31CA6F8BC706D89D0ED9B9B013E82535D876D81181274FB1CFDE4C83B334EE7"
         },
         {
             "id": "plain_tweak",
@@ -305,7 +305,7 @@
             "is_xonly": [
                 false
             ],
-            "expected": "D022AA04EBA4CB9390FA22EF4F4AF5BDD12F9EB960B99D2E21FFD363E10B2508"
+            "expected": "E207D3A6308249F667EED8F131F5FA850E2F2AD28CA0CBDF569C78A2AA79489B"
         },
         {
             "id": "xonly_tweak",
@@ -329,7 +329,7 @@
             "is_xonly": [
                 true
             ],
-            "expected": "D022AA04EBA4CB9390FA22EF4F4AF5BDD12F9EB960B99D2E21FFD363E10B2508"
+            "expected": "E207D3A6308249F667EED8F131F5FA850E2F2AD28CA0CBDF569C78A2AA79489B"
         },
         {
             "id": "mixed_tweaks",
@@ -357,7 +357,7 @@
                 false,
                 true
             ],
-            "expected": "83E114551B7C6D973685E42461B153AB8B8DD57F368C74565CE340AA261F74EE"
+            "expected": "CF5E28869E97E1C4C60018A326BE593837EBB012399EB1169C06065838A9ACEC"
         },
         {
             "id": "different_message",
@@ -377,19 +377,19 @@
             "msg_index": 1,
             "tweaks": [],
             "is_xonly": [],
-            "expected": "E35323BFCC02413D4FC6DA61612E5D0A404AA4DAB5649ED82E8F669D02E3A4D8"
+            "expected": "2A626D50B34C6ED6A4D1BAFE8BF94C2A4FDAF35D598E7D604B0A3899E6046391"
         }
     ],
     "aggnonces": [
-        "0238ADD3D6209080C8EFB655513D9420AA457F06ACD3EC84E8DB84E208A0664BA9038839A2BE9E86FA973355623AC4560D717F19A3EEFE757F2A570CCB00265FDD80",
+        "0238ADD3D6209080C8EFB655513D9420AA457F06ACD3EC84E8DB84E208A0664BA90264EECCA2D3F91B4C919A7C4E0A98D9A36897BCF96300AEEAA7755716364C7A77",
         "03DA9B9E9AB699C11CEF8B8CDBD452F7C5CA6DD9DA7A9EFA19ACC0A89758554B6C0352520DE6009C7E49F080EA4C21A2ADE2D2F58220C30A7CB056FC4C098AD30369",
         "048465FCF0BBDBCF443AABCCE533D42B4B5A10966AC09A49655E8C42DAAB8FCD61037496A3CC86926D452CAFCFD55D25972CA1675D549310DE296BFF42F72EEEA8C9",
         "028465FCF0BBDBCF443AABCCE533D42B4B5A10966AC09A49655E8C42DAAB8FCD61020000000000000000000000000000000000000000000000000000000000000009",
         "028465FCF0BBDBCF443AABCCE533D42B4B5A10966AC09A49655E8C42DAAB8FCD6102FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC30"
     ],
     "psigs": [
-        "0F4B96669319A39C1819B9C3E1509593ACEA1E97074E4A48809C50FB9046D5B8",
-        "F0B469996CE65C63E7E6463C1EAF6A6B0DC4BE4FA7FA55F33F360D913FEF6B89",
+        "DCEA7826FC546DB8B4392CE438713EB4160EA23AD91FCB42A6011A55F8962652",
+        "231587D903AB92474BC6D31BC78EC14AA4A03AABD628D4F919D14436D7A01AEF",
         "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141"
     ],
     "sign_error_test_cases": [

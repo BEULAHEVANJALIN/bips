@@ -317,16 +317,18 @@ def nonce_agg(pubnonces: List[bytes]) -> bytes:
 # End of helper functions copied from BIP-327 reference implementation.
 #
 
-def nonce_agg_ext(nonce_internal: bytes, pk_internal: Point) -> bytes:
+def nonce_agg_ext(aggnonce: bytes, pk_agg: PlainPk) -> bytes:
+    if len(pk_agg) != 33:
+        raise ValueError('The aggregate public key must be a 33-byte array.')
     try:
-        if len(nonce_internal) != 66:
+        if len(aggnonce) != 66:
             raise ValueError('The aggregate nonce must be a 66-byte array.')
-        R_1_ = cpoint_ext(nonce_internal[0:33])
-        R_2_ = cpoint_ext(nonce_internal[33:66])
+        R_1_ = cpoint_ext(aggnonce[0:33])
+        R_2_ = cpoint_ext(aggnonce[33:66])
     except ValueError:
         # Nonce aggregator sent invalid nonces
         raise InvalidContributionError(None, "aggnonce")
-    b = agg_nonce_coeff_hash(nonce_internal, pk_internal)
+    b = agg_nonce_coeff_hash(pk_agg, aggnonce)
     R_1 = R_1_
     R_2 = point_mul(R_2_, b)
     if is_infinite(R_1) or is_infinite(R_2):
@@ -349,11 +351,11 @@ def apply_tweaks(keyagg_ctx: KeyAggContext, tweaks: List[bytes], is_xonly: List[
         keyagg_ctx = apply_tweak(keyagg_ctx, tweaks[i], is_xonly[i])
     return keyagg_ctx
 
-def agg_nonce_coeff_hash(aggnonce: bytes, aggkey: Point) -> int:
-    return int_from_bytes(tagged_hash('NestedMuSig/aggnoncecoef', aggnonce + xbytes(aggkey))) % n
-
-def print_tree_path(pk_level: List[PlainPk]):
-        print(f"Nodes at level: {[pk.hex().upper() for pk in pk_level]}")
+# The intermediate binding factor commits to the 33-byte plain aggregate public
+# key of the subgroup (not its X-only encoding) and to the subgroup's internal
+# aggregate nonce. It does not commit to the message.
+def agg_nonce_coeff_hash(pk_agg: PlainPk, aggnonce: bytes) -> int:
+    return int_from_bytes(tagged_hash('NestedMuSig/aggnoncecoef', pk_agg + aggnonce)) % n
 
 def get_session_values(session_ctx: SessionContext, pk: PlainPk) -> Tuple[Point, int, int, int, Point, int]:
     (nonce_path, pk_tree, tweaks, is_xonly, msg) = session_ctx
@@ -376,7 +378,7 @@ def get_session_values(session_ctx: SessionContext, pk: PlainPk) -> Tuple[Point,
     b_path = []
     a_path = [a_d_1]
     for d in range(depth-2, -1, -1):
-        b_d = agg_nonce_coeff_hash(nonce_path[d + 1], pk_parent)
+        b_d = agg_nonce_coeff_hash(PlainPk(cbytes(pk_parent)), nonce_path[d + 1])
         R_1, R_2 = nonce_points[d + 1]
         if is_infinite(R_1) or is_infinite(point_mul(R_2, b_d)):
             raise InvalidContributionError(d + 1, "aggnonce")
